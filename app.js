@@ -11,6 +11,7 @@ const app = express();
 //   optionsSuccessStatus: 200,
 // };
 
+// test
 app.use(express.json());
 app.use("/api", router);
 app.use(express.static("uploads"));
