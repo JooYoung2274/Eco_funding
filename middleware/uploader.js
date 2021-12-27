@@ -8,7 +8,13 @@ export const uploader = multer({
     },
     filename: function (req, file, cb) {
       //Todo : 서버주소를 filename
-      cb(null, file.originalname.split(".")[0] + "-" + Date.now() + path.extname(file.originalname));
+      cb(
+        null,
+        file.originalname.split(".")[0] +
+          "-" +
+          Date.now() +
+          path.extname(file.originalname),
+      );
     },
   }),
 });
